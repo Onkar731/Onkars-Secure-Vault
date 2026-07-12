@@ -53,9 +53,9 @@ OSV uses a frictionless, hardware-agnostic licensing system. Upon first launch, 
 Currently, OSV is in a closed beta testing phase. To install the software, you must have been issued a personal `license.txt` cryptographic signature file by Onkar.
 
 1. Navigate to the **[Releases](../../releases)** page on this repository.
-2. Download the latest `OSV_Setup.zip` file and extract it to your desktop.
+2. Download the latest `OSV Installation Setup.zip` file and extract it to your desktop.
 3. Download the personal `license.txt` file provided to you via email.
-4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `OSV Setup.exe` file.
+4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `Onkars Secure Vault Setup v1.0.exe` file.
 5. Run the Setup executable. The software will automatically ingest your license, verify the signature, and permanently secure it to your local environment.
 
 ---
@@ -75,5 +75,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 <p align="center">
-  <i>Engineered and Designed by Onkar</i>
+  <i>Engineered and Designed by Mr. Onkar Shengule</i>
 </p>

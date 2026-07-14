@@ -6,6 +6,12 @@
 
 ---
 
+---
+
+Click here to get application releases: **[Releases](../../releases)**
+
+---
+
 ## 📖 Overview
 **Onkar's Secure Vault (OSV)** is a standalone desktop file encryption engine designed to provide true zero-knowledge security without relying on cloud synchronization, background web services, or external servers. 
 

@@ -6,8 +6,6 @@
 
 ---
 
----
-
 Click here to get application releases: **[Releases](../../releases)**
 
 ---

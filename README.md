@@ -64,18 +64,46 @@ Currently, OSV is in a closed beta testing phase. To install the software, you m
 
 ---
 
-## ⚖️ Legal, Licensing, & Terms of Use
+## ⚖️ Proprietary Licensing, Legal Framework, & Terms of Use
 
-### Non-Commercial & Educational Use
-This software is built explicitly for educational purposes, portfolio demonstration, and personal use by the developer and authorized beta testers. **It is strictly prohibited to copy, distribute, modify, or deploy this software for commercial, enterprise, or financial gain.**
+### 1. Ownership of Intellectual Property & Copyright Notice
+**Copyright © 2026 Mr. Onkar Shengule. All Rights Reserved.**
 
-### Strict Zero-Knowledge Disclaimer
-This is a true Zero-Knowledge application. The developer has absolutely no access to your data, no cloud backups exist, and there are no developer "backdoors." **If you forget your Master Password and lose your Recovery Keyfile, your data is mathematically irretrievable.**
+All components of this software application, including but not limited to the underlying source code (`.py`, `.iss`, configuration scripts, structural architectures), graphical user interface (UI) layouts, visual assets, binary executables (`.exe`), embedded local database schemas, and specialized cryptographic implementations, are the sole and exclusive intellectual property of the developer, **Mr. Onkar Shengule**. 
 
-### Limitation of Liability (No Warranty)
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, DEVELOPERS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+This software is protected under international copyright frameworks, proprietary desktop utility regulations, and digital property conventions. Unauthorized reproduction, modification, translation, reverse engineering, decompilation, or redistribution of any resource within this repository is strictly actionable under civil and criminal software piracy statutes.
 
-**By installing and utilizing this software, you explicitly agree that the developer (Onkar) holds absolutely zero liability for any data loss, file corruption, or system issues that may occur.** Always maintain secondary backups of your critical plaintext data before utilizing standalone encryption tools.
+---
+
+### 2. Strict Restrictions on Use & Exclusive Commercialization
+This repository is hosted publicly **strictly and exclusively for portfolio demonstration, technical peer review, and personal code evaluation.** 
+
+By accessing, downloading, cloning, or interacting with this repository, you explicitly agree to the following legally binding constraints:
+* **Exclusive Commercial Rights:** Only **Mr. Onkar Shengule** retains the absolute, unconditional, and exclusive rights for the commercialization, corporate deployment, white-label distribution, and monetization of this software application in professional terms. No other party is authorized to lease, sell, or license this code.
+* **Prohibition of Derivative Works:** The designation of this software as an educational or portfolio project does **not** constitute a public license. You are strictly forbidden from modifying, rebranding, creating forks, or generating derivative software variants under the pretext of "educational use," "personal practice," or "academic research." 
+* **No Public Binary Hosting:** You are legally unauthorized to host, mirror, package, or distribute compiled versions (`.exe` installers) of this application on third-party download portals, corporate servers, or decentralized torrent networks.
+
+*Any violation of these terms, including the unauthorized extraction of core cryptographic logic or UI assets for commercial exploitation, will result in immediate legal escalation, including formal DMCA takedown requests and claims for intellectual property damages.*
+
+---
+
+### 3. Cryptographic Architecture & Cloud Connectivity Roadmap
+The application's underlying security architecture is built upon the following strict parameters:
+* **Current Offline Zero-Knowledge State:** Current operational versions of the software feature absolute local execution. The engine has no active external databases, remote tracking hooks, or telemetry layers capable of inspecting or filtering user files.
+* **Future Cloud Implementation Notice:** While current builds maintain zero cloud dependencies for maximum local isolation, **future production releases may integrate targeted cloud network endpoints.** These cloud-based features will be implemented exclusively to handle secure global sales distribution, automated cryptographic license key verification, and over-the-air (OTA) updates.
+* **Irreversible Mathematical Locked State:** Local encryption routines depend entirely on user-defined strings. If you forget your Master Password and lose access to your Stealth Recovery Keyfile, **your secured files are mathematically and physically irretrievable.** The developer, **Mr. Onkar Shengule**, holds no secret backdoors and cannot recover your data under any circumstances.
+
+---
+
+### 4. Comprehensive Limitation of Liability & Warranty Waiver
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OPERATIONAL STABILITY, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, DEVELOPERS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+**By installing, compiling, or executing this application, you explicitly and unconditionally agree that the developer, Mr. Onkar Shengule, holds zero legal, financial, or operational liability for:**
+1. Any catastrophic data loss, structural file corruption, or permanent denial of access to local host directories.
+2. Operating system conflicts, registry path errors, or system stability degradation following context menu shell integration.
+3. Exploits arising from compromised user execution environments, weak passwords, or physical unauthorized access to the target hardware.
+
+It remains the exclusive responsibility of the end-user to maintain redundant, unencrypted backups of critical personal or enterprise documents in an isolated, secure location prior to parsing them through any standalone desktop encryption engine.
 
 ---
 <p align="center">

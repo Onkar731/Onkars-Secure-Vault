@@ -59,7 +59,7 @@ Currently, OSV is in a closed beta testing phase. To install the software, you m
 1. Navigate to the **[Releases](../../releases)** page on this repository.
 2. Download the latest `OSV Installation Setup.zip` file and extract it to your desktop.
 3. Download the personal `license.txt` file provided to you via email.
-4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `Onkars Secure Vault Setup v1.0.exe` file.
+4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `Onkars Secure Vault Setup v1.x.exe` file.
 5. Run the Setup executable. The software will automatically ingest your license, verify the signature, and permanently secure it to your local environment.
 
 ---

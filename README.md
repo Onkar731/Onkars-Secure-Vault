@@ -53,7 +53,7 @@ OSV uses a frictionless, hardware-agnostic licensing system. Upon first launch, 
 
 ---
 
-## 📥 Beta Installation Guide
+## 📥 Installation Guide
 Currently, OSV is in a closed beta testing phase. To install the software, you must have been issued a personal `license.txt` cryptographic signature file by Onkar.
 
 1. Navigate to the **[Releases](../../releases)** page on this repository.

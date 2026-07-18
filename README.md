@@ -1,4 +1,4 @@
-<h1 align="center">🛡️ Onkar's Secure Vault (OSV) v1.0</h1>
+<h1 align="center">🛡️ Onkar's Secure Vault (OSV)</h1>
 
 <p align="center">
   <strong>An enterprise-grade, offline desktop encryption architecture built for absolute data privacy.</strong>

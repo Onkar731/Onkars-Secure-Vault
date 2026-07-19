@@ -49,6 +49,14 @@ A specialized encrypted text editor for highly sensitive data. Text exists stric
 
 ---
 
+## 🛡️ IMP Features & Subsystems
+*   **Deep-Kernel Data Shredder:** Completely bypasses the Windows Recycle Bin. Explicitly overwrites targeted disk sectors with random cryptographic noise three consecutive times (DoD 5220.22-M military standard) before deletion, making forensic data recovery physically impossible.
+*   **Secure Notes Sandbox:** An isolated, encrypted text editor designed for highly sensitive passwords or PINs. Text is processed strictly in volatile system RAM and encrypted directly into the Vault container, leaving zero forensic `.txt` remnants on the hard drive.
+*   **Aggressive RAM Locking:** Cryptographic Master Keys (MEK) are bound exclusively to volatile memory. The application now explicitly purges and zeroes out the key from RAM the millisecond the vault is locked or panic-exited, neutralizing memory-scraping malware and cold-boot attacks.
+*   **Atomic I/O Transactions:** Original plaintext files are never securely shredded until the AES-GCM encrypted payload and SQLite ledger records are 100% mathematically verified and physically committed to the disk. This eliminates data corruption risks during sudden power losses or system crashes.
+
+--- 
+
 ## 💳 Tiered Licensing & Future Commercial Plans
 
 The Software operates on a structured licensing framework:

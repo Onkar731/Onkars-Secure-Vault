@@ -10,100 +10,107 @@ Click here to get application releases: **[Releases](../../releases)**
 
 ---
 
+**Current Version:** 1.3.0 (BETA / EVALUATION BUILD)  
+**Principal Architect:** Mr. Onkar Shengule
+
+---
+
 ## 📖 Overview
 **Onkar's Secure Vault (OSV)** is a standalone desktop file encryption engine designed to provide true zero-knowledge security without relying on cloud synchronization, background web services, or external servers. 
 
 Developed as a comprehensive software architecture project, OSV simulates commercial-grade DRM (Digital Rights Management) and OS-level integrations. It utilizes an **AES-256-GCM** cryptographic backend and a strictly local SQLite database to ensure that the user retains complete, offline control over their sensitive files.
 
-> ⚠️ **NOTICE FOR PUBLIC DOWNLOADERS:** While this repository and the application files are publicly visible, the application itself is cryptographically locked. **You cannot use this software without a digitally signed `license.txt` file issued directly by the developer.** 
+> 🚨 **CRITICAL ANTI-FRAUD & BETA TESTING DECLARATION** 🚨
+> This Software is currently in a closed Beta/Testing evaluation phase. **The Author is NOT currently selling, licensing for profit, or monetizing this Software in any capacity, locally or globally.** 
+> * If you have paid any amount of money to acquire this Software, you have been defrauded by an unauthorized third party. 
+> * **Mr. Onkar Shengule assumes absolutely no liability for financial losses, and is under no obligation to provide support, premium upgrades, or refunds for copies of this Software obtained or purchased through unauthorized third parties.**
 
 ---
 
 ## ✨ Core Features & Capabilities
 
-### 1. The Master Dashboard
+### 1. The Master Dashboard (Base Edition)
 A sleek, locally hosted interface built with PyQt6. It allows users to create virtual folder hierarchies, drag-and-drop files, and manage encrypted data seamlessly. 
 
-### 2. Native Windows OS Integration
+### 2. Native Windows OS Integration (Premium Tier)
 OSV natively binds to the Windows context menu. You can right-click any file or folder directly on your desktop or file explorer to:
 *   **Lock Here Using OSV:** Encrypts the file in its current location, leaving behind a mathematically locked `.osv` file.
 *   **Send to Vault:** Encrypts and securely moves the file into your central, hidden vault database.
 *   **Unlock / Restore:** Right-click any `.osv` file to instantly decrypt and restore it to its original state (requires Master Password authorization).
 
-### 3. Plausible Deniability (The Decoy Vault)
-Built for extreme threat models (forced disclosure scenarios), OSV features a mathematically isolated secondary vault. 
-*   By entering a specific "Decoy Password" at the login screen, the system boots into a completely separate SQLite database and cryptographic environment.
-*   The Decoy Vault has zero cryptographic awareness of the Master Vault, and the Master Vault has zero awareness of the Decoy. 
+### 3. Plausible Deniability / Decoy Vault (Premium Tier)
+Built for extreme threat models, OSV features a mathematically isolated secondary vault. By entering a specific "Decoy Password" at the login screen, the system boots into a completely separate SQLite database. The Decoy Vault has zero cryptographic awareness of the Master Vault, and vice versa. 
 
-### 4. Smart Uninstallation & Data Recovery
-Handling the lifecycle of encrypted data is critical. OSV features a custom Windows uninstaller intercept. If a user attempts to uninstall the software via Windows Settings, OSV launches a secure recovery sequence, allowing the user to automatically decrypt and export all central vault files to a safe folder before the application footprint is wiped.
+### 4. Deep-Kernel Data Shredder (Premium Tier)
+Standard file deletion leaves massive security loopholes. The OSV Shredder explicitly opens targeted external or internal vault files and overwrites the physical disk sectors with random cryptographic noise three consecutive times utilizing DoD 5220.22-M military standards, making forensic recovery impossible.
 
-### 5. "Consume & Lock" DRM Engine
-OSV uses a frictionless, hardware-agnostic licensing system. Upon first launch, the application reads the provided plaintext `license.txt`, verifies the developer's cryptographic signature, encrypts the payload into a hidden system cache, and permanently shreds the original text file to prevent unauthorized offline sharing.
+### 5. Secure Notes Sandbox (Premium Tier)
+A specialized encrypted text editor for highly sensitive data. Text exists strictly in volatile system RAM and is encrypted directly into the secure vault container upon saving, leaving zero forensic text remnants on the physical hard drive.
 
 ---
 
-## 🏗️ Technical Stack
+## 💳 Tiered Licensing & Future Commercial Plans
+
+The Software operates on a structured licensing framework:
+
+*   **Free Base Tier:** You are granted a limited, temporary license to evaluate the core encryption engine for personal, non-commercial testing purposes.
+*   **Premium Tier:** Access to advanced subsystems (Data Shredder, Secure Notes, OS Integration) requires an authorized Cryptographic License Key issued directly by the Author for testing purposes.
+
+### Future Pricing & Refund Policy
+In the event that the Author initiates official commercial distribution in the future, the following refund policy applies universally: 
+*   **Non-Refundable:** Because Premium Licenses are offline, mathematically node-locked cryptographic keys bound specifically to a user's physical hardware fingerprint, they cannot be remotely deactivated or returned. Therefore, all authorized license issuances are STRICTLY NON-REFUNDABLE. 
+*   **Terms of Service regarding "Lifetime":** All licenses grant access to the current software version "as-is". The developer reserves the right to modify, restrict, or discontinue future updates, features, or support services at any time without notice. "Lifetime" refers to the lifespan of this software product, not a guarantee of eternal updates or service availability.
+
+---
+
+## 🏗️ Technical Stack & Dependencies
 *   **Backend Logic:** Python 3.x
-*   **Cryptographic Engine:** `cryptography` (AES-256-GCM, PBKDF2 HMAC SHA256)
+*   **Cryptographic Engine:** `cryptography` (AES-256-GCM, Argon2id)
 *   **Database:** SQLite3 (Local, air-gapped schema)
-*   **User Interface:** PyQt6 (Asynchronous rendering, stacked widget routing)
-*   **OS Integration:** Native Windows Registry manipulation (`ctypes`, `subprocess`)
-*   **Deployment:** PyInstaller (Executable compilation) & Inno Setup (Pascal-based installation wizard)
+*   **User Interface:** PyQt6
+*   **OS Integration:** Native Windows Registry manipulation
+*   **Deployment Wrapper:** Inno Setup & PyInstaller 
 
 ---
 
 ## 📥 Installation Guide
-Currently, OSV is in a closed beta testing phase. To install the software, you must have been issued a personal `license.txt` cryptographic signature file by Onkar.
 
-1. Navigate to the **[Releases](../../releases)** page on this repository.
+1. Navigate to the **Releases** page on this repository.
 2. Download the latest `OSV Installation Setup.zip` file and extract it to your desktop.
-3. Download the personal `license.txt` file provided to you via email.
-4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `Onkars Secure Vault Setup v1.x.exe` file.
+3. Download the personal `license.txt` file provided to you (if participating in the Premium Beta).
+4. Place the `license.txt` file directly inside the extracted setup folder, sitting exactly next to the `Onkars Secure Vault Setup v1.x.x.exe` file.
 5. Run the Setup executable. The software will automatically ingest your license, verify the signature, and permanently secure it to your local environment.
 
 ---
 
 ## ⚖️ Proprietary Licensing, Legal Framework, & Terms of Use
 
-### 1. Ownership of Intellectual Property & Copyright Notice
+### 1. Ownership of Intellectual Property & Authority
 **Copyright © 2026 Mr. Onkar Shengule. All Rights Reserved.**
 
-All components of this software application, including but not limited to the underlying source code (`.py`, `.iss`, configuration scripts, structural architectures), graphical user interface (UI) layouts, visual assets, binary executables (`.exe`), embedded local database schemas, and specialized cryptographic implementations, are the sole and exclusive intellectual property of the developer, **Mr. Onkar Shengule**. 
+All intellectual property rights, source code, graphical interfaces, and design architecture belong exclusively to the Principal Architect, Mr. Onkar Shengule. Onkar's Secure Vault is strictly proprietary software. All distribution and future commercialization rights are exclusively held by Mr. Onkar Shengule.
 
-This software is protected under international copyright frameworks, proprietary desktop utility regulations, and digital property conventions. Unauthorized reproduction, modification, translation, reverse engineering, decompilation, or redistribution of any resource within this repository is strictly actionable under civil and criminal software piracy statutes.
+You are strictly PROHIBITED from:
+*   Selling, renting, leasing, reselling, or white-labeling the Software.
+*   Decompiling, reverse-engineering, or bypassing the cryptographic license verification gates.
+*   Distributing your assigned testing license key (`license.txt`) to any third parties.
 
----
+### 2. Zero-Knowledge Architecture & Irreversible Data Loss
+This Software employs strict zero-knowledge, local AES-256-GCM encryption. By utilizing this Software, you acknowledge the following absolute cryptographic realities:
+*   **No Backdoors:** The Author has absolutely zero access to your locked files, your Master Password, or your Decoy Password.
+*   **Irreversible Data Loss:** If you forget your Master Password and lose access to your Account Recovery methods, your data is mathematically impossible to recover.
+*   **100% Offline Integrity:** Your files never leave your device. The Author does not store, sync, collect telemetry, or transmit your data to any external cloud servers.
 
-### 2. Strict Restrictions on Use & Exclusive Commercialization
-This repository is hosted publicly **strictly and exclusively for portfolio demonstration, technical peer review, and personal code evaluation.** 
+### 3. Limitation of Liability & High-Risk Features
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. THE AUTHOR EXPLICITLY DISCLAIMS ALL WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, BUG-FREE, OR ENTIRELY IMMUNE TO FORENSIC OPERATING SYSTEM VULNERABILITIES.
 
-By accessing, downloading, cloning, or interacting with this repository, you explicitly agree to the following legally binding constraints:
-* **Exclusive Commercial Rights:** Only **Mr. Onkar Shengule** retains the absolute, unconditional, and exclusive rights for the commercialization, corporate deployment, white-label distribution, and monetization of this software application in professional terms. No other party is authorized to lease, sell, or license this code.
-* **Prohibition of Derivative Works:** The designation of this software as an educational or portfolio project does **not** constitute a public license. You are strictly forbidden from modifying, rebranding, creating forks, or generating derivative software variants under the pretext of "educational use," "personal practice," or "academic research." 
-* **No Public Binary Hosting:** You are legally unauthorized to host, mirror, package, or distribute compiled versions (`.exe` installers) of this application on third-party download portals, corporate servers, or decentralized torrent networks.
+**UNDER NO CIRCUMSTANCES SHALL Mr. Onkar Shengule BE HELD LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE.** THIS INCLUDES, BUT IS NOT LIMITED TO:
+*   Permanent data loss due to forgotten Master or Decoy passwords.
+*   Intentional or accidental permanent data destruction executed via the in-app DoD 5220.22-M Data Shredder.
+*   Data corruption resulting from hardware failure, power loss, or unexpected computer shutdowns during I/O operations.
+*   Loss of data due to user deletion of raw `.osv` files or the core Vault Database.
 
-*Any violation of these terms, including the unauthorized extraction of core cryptographic logic or UI assets for commercial exploitation, will result in immediate legal escalation, including formal DMCA takedown requests and claims for intellectual property damages.*
-
----
-
-### 3. Cryptographic Architecture & Cloud Connectivity Roadmap
-The application's underlying security architecture is built upon the following strict parameters:
-* **Current Offline Zero-Knowledge State:** Current operational versions of the software feature absolute local execution. The engine has no active external databases, remote tracking hooks, or telemetry layers capable of inspecting or filtering user files.
-* **Future Cloud Implementation Notice:** While current builds maintain zero cloud dependencies for maximum local isolation, **future production releases may integrate targeted cloud network endpoints.** These cloud-based features will be implemented exclusively to handle secure global sales distribution, automated cryptographic license key verification, and over-the-air (OTA) updates.
-* **Irreversible Mathematical Locked State:** Local encryption routines depend entirely on user-defined strings. If you forget your Master Password and lose access to your Stealth Recovery Keyfile, **your secured files are mathematically and physically irretrievable.** The developer, **Mr. Onkar Shengule**, holds no secret backdoors and cannot recover your data under any circumstances.
-
----
-
-### 4. Comprehensive Limitation of Liability & Warranty Waiver
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OPERATIONAL STABILITY, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS, DEVELOPERS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-**By installing, compiling, or executing this application, you explicitly and unconditionally agree that the developer, Mr. Onkar Shengule, holds zero legal, financial, or operational liability for:**
-1. Any catastrophic data loss, structural file corruption, or permanent denial of access to local host directories.
-2. Operating system conflicts, registry path errors, or system stability degradation following context menu shell integration.
-3. Exploits arising from compromised user execution environments, weak passwords, or physical unauthorized access to the target hardware.
-
-It remains the exclusive responsibility of the end-user to maintain redundant, unencrypted backups of critical personal or enterprise documents in an isolated, secure location prior to parsing them through any standalone desktop encryption engine.
+**Your use of this Software is entirely at your own risk.** It is highly recommended that you maintain external offline backups of highly critical files before committing them to the Vault or executing shredding operations.
 
 ---
 <p align="center">

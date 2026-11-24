@@ -40,6 +40,8 @@ Click here to download official releases: **[Releases](../../releases)**
 
 **Onkar's Secure Vault (OSV)** is a standalone, offline-first Windows desktop encryption engine built to deliver true zero-knowledge security without uploading your private vault to corporate cloud storage. Your encrypted files and metadata remain strictly on your local computer.
 
+OSV provides local zero-knowledge AES-256-GCM encryption for files stored inside the OSV Vault from the moment of ingestion onward, operating within the security boundaries of an uncompromised Windows host.
+
 Built on **AES-256-GCM** (64 KB authenticated chunk streaming), **Argon2id**, **HKDF-SHA512**, **X25519**, and **RSA-2048** trust anchors with a **PySide6** interface, OSV v1.5.0 pairs local vault isolation with optional encrypted peer-to-peer sharing (**OSV Beam**), zero-knowledge browser links (**Web Drops**), a **Concurrent Document Sandbox**, and a **Vault Recovery Card** system.
 
 ---
@@ -156,7 +158,16 @@ This Software operates on strict local zero-knowledge encryption. By installing 
 * **Irreversible Data Loss:** Losing your Master Password along with your recovery credentials renders your encrypted data mathematically unrecoverable.
 * **Transparent Network Scope:** Vault files stay 100% local on your machine. Network communication occurs strictly for optional Email 2FA OTP verification, hardware node license ledger & RSA-2048 signed update checks, and user-initiated OSV Beam Global Relay / Web Drop sharing.
 
-### 3. Platform Restriction, Legacy Builds & Limitation of Liability
+### 3. Cryptographic Trust Boundary, Pre-Existing OS Remnants & Endpoint Responsibility
+
+By installing or using Onkar's Secure Vault, you explicitly acknowledge the technical boundary between what OSV controls and what remains under Windows OS or user control:
+
+* **Point-of-Ingestion Protection:** OSV encrypts and protects data strictly from the moment a file is successfully encrypted inside the OSV Vault or an OSV-managed container (`.osv` / `.osvd`). OSV has zero control over copies, backups, or exposures that occurred prior to encryption.
+* **Pre-Existing Windows & Third-Party Remnants (Data Remanence):** Before OSV is installed or before files are locked, Windows and third-party apps routinely create independent plaintext copies or metadata—including Windows Volume Shadow Copies (VSS / Previous Versions), System Restore points, Windows Search Index, Thumbnail Caches, Recycle Bin entries, unallocated disk space, Pagefile/Hibernation files, Windows Recall/Timeline snapshots, Microsoft Office AutoRecover/Temp files, browser caches, and cloud-sync folders (OneDrive, Google Drive, Dropbox). OSV intentionally does **not** alter or wipe system-level Windows Shadow Copies or third-party cloud histories, and **Mr. Onkar Shengule bears zero liability** for exposure of any pre-existing or externally cached copies.
+* **Compromised Host / Malware Exclusion:** No user-space encryption application can guarantee secrecy on an already compromised operating system. Keeping the Windows host free of malware, spyware, keyloggers, info-stealers, remote access trojans (RATs), or unauthorized Administrator access is **100% the sole responsibility of the user**.
+* **External Editors & Physical Capture Limits:** OSV's Windows Kernel Capture Shield applies strictly to OSV-owned windows and built-in viewers. Third-party external editors opened via Document Sandbox (such as Microsoft Word, Excel, or PowerPoint) are controlled by Windows and their respective vendors and cannot be Capture-Shielded by third-party software. No software can prevent physical shoulder-surfing or external smartphone/camera photography of a monitor.
+
+### 4. Platform Restriction, Legacy Builds & Limitation of Liability
 
 **THE SOFTWARE, DOCUMENTATION, AND RECOVERY UTILITIES ARE PROVIDED STRICTLY "AS-IS" AND "AS-AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, BUG-FREE, OR IMMUNE TO OPERATING SYSTEM OR HARDWARE VULNERABILITIES.**
 
